@@ -13,6 +13,7 @@ const STRINGS = {
   start: { en: 'Start', sn: 'Tanga', nd: 'Qala' },
   stop: { en: 'Stop', sn: 'Mira', nd: 'Yima' },
   speak: { en: 'Speak', sn: 'Taura', nd: 'Khuluma' },
+  autoSpeak: { en: 'Speak results automatically', sn: 'Taura mhinduro pachayo', nd: 'Khuluma imiphumela ngokwayo' },
   clear: { en: 'Clear', sn: 'Bvisa', nd: 'Sula' },
   done: { en: 'Done', sn: 'Zvapera', nd: 'Kuphelile' },
   listening: { en: 'Listening…', sn: 'Ndiri kuteerera…', nd: 'Ngilalele…' },

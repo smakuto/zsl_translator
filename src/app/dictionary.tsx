@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useMemo, useState } from 'react';
 import { FlatList, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
+import { OfflineBadge } from '../components/OfflineBadge';
 import { SignPlayer } from '../components/SignPlayer';
 import { useDictionary } from '../state/DictionaryContext';
 import { useSettings } from '../state/SettingsContext';
@@ -30,6 +31,7 @@ export default function DictionaryScreen() {
 
   return (
     <View style={[styles.wrap, { backgroundColor: theme.bg }]}>
+      <OfflineBadge />
       {selected && <SignPlayer sequence={sequence} avatarSize={150} />}
       <View style={[styles.search, { borderColor: theme.border, backgroundColor: theme.surfaceAlt }]}>
         <Ionicons name="search" size={20} color={theme.textMuted} />

@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
   },
   bigLabel: { fontWeight: '800' },
   icon: { width: 52, height: 52, borderRadius: 26, alignItems: 'center', justifyContent: 'center' },
-  pills: { flexDirection: 'row', gap: 8 },
+  pills: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
   pill: { minWidth: 56, minHeight: 48, paddingHorizontal: 14, borderRadius: 24, alignItems: 'center', justifyContent: 'center', borderWidth: 2 },
   card: { borderRadius: 20, padding: 14, borderWidth: 1 },
   chips: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
