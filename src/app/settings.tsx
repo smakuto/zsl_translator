@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { ComponentProps, ReactNode } from 'react';
 import { ScrollView, StyleSheet, Switch, Text, View } from 'react-native';
+import { OfflineBadge } from '../components/OfflineBadge';
 import { Card, Pills } from '../components/ui';
 import { useSettings } from '../state/SettingsContext';
 import { ThemeName } from '../theme/themes';
@@ -23,6 +24,7 @@ export default function SettingsScreen() {
   const { theme, t, settings, update } = useSettings();
   return (
     <ScrollView style={{ backgroundColor: theme.bg }} contentContainerStyle={styles.wrap}>
+      <OfflineBadge />
       <Section icon="contrast" title={t('theme')}>
         <Pills<ThemeName>
           options={['dark', 'outdoor']}
@@ -44,7 +46,7 @@ export default function SettingsScreen() {
       </Section>
       <Section icon="volume-high" title={t('speak')}>
         <View style={styles.title}>
-          <Text style={{ color: theme.text, flex: 1, fontSize: 16 * theme.scale }}>Auto-speak</Text>
+          <Text style={{ color: theme.text, flex: 1, fontSize: 16 * theme.scale }}>{t('autoSpeak')}</Text>
           <Switch value={settings.autoSpeak} onValueChange={(v) => update({ autoSpeak: v })} />
         </View>
       </Section>
