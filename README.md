@@ -136,7 +136,9 @@ npx expo-doctor      # dependency/config checks
 ## Size & performance budget
 
 - Release APK is ARM-only (`armeabi-v7a`, `arm64-v8a`) with R8 minification and
-  resource shrinking (`expo-build-properties` in `app.json`). Build per-ABI APKs or an
+  resource shrinking (`expo-build-properties` in `app.json`). Measured universal
+  ARM release APK: **63 MB** (native libs: arm64-v8a 30.5 MB, armeabi-v7a 21 MB), so a
+  single-ABI APK/AAB download is roughly 35–45 MB. Build per-ABI APKs or an
   AAB for the Play Store to keep downloads small.
 - No ML weights are bundled; the optional model pack (< 200 MB) and how to
   build/deliver it are described in [docs/ML_MODELS.md](docs/ML_MODELS.md).
